@@ -22,9 +22,9 @@ namespace asthanarht.fbindi
             //    consumerKey: "",
             //    consumerSecret: "");
 
-            //OAuthWebSecurity.RegisterFacebookClient(
-            //    appId: "",
-            //    appSecret: "");
+            OAuthWebSecurity.RegisterFacebookClient(
+                appId: "749608768405485",
+                appSecret: "7b684cf376f8ea0b2eaf5a997147decc");
 
             //OAuthWebSecurity.RegisterGoogleClient();
         }

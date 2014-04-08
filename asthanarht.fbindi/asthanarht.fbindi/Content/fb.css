@@ -1,0 +1,277 @@
+﻿
+
+*	{margin: 0; padding: 0;
+ -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+}
+li 	{list-style:none;}
+a	{text-decoration:none;}
+img	{border:0;}
+
+@import url(http://fonts.googleapis.com/css?family=Strait);
+
+body	{padding-top:99px;}
+/*	Header	*/
+#header	{width: 100%; height: 46px; background: #365d98; border-bottom: 1px solid #050b0b; position:fixed; top:0px; z-index:99999;}
+
+#logo	{width: 100px; float: left; margin-left: 20px; margin-top: 3px;}
+#logo a img 	{max-width:100%;}
+
+/*	Jewels	*/
+#jewel-container 	{width: 90px; margin-top: 8px; float:left;}
+#jewel-container li 	{float:left;}
+#jewel-container li:hover 	{background:#4b67a1;}
+#jewel-container li a	{background: url(http://www.erhanbasa.com/uploads/old/fb/fb-sprite.png) no-repeat; width:24px; height:31px; display:block;}
+#jewel-container li.requests a	{background-position: -25px -221px;}
+#jewel-container li.messages a	{background-position: -56px -85px;}
+#jewel-container li.notifications a	{background-position: -50px -186px;}
+
+/*	Header Navigation	*/
+#head-navigation 	{width:400px; float:left;}
+#head-navigation li	{float:left; margin:0 10px;}
+#head-navigation li a	{color:#fff; opacity: .7; font: normal 16px/46px 'Strait',sans-serif;}
+#head-navigation li a:hover,
+#head-navigation li a.current	{opacity:1;}
+
+/*	Header	Search	*/
+#head-search		{float:right; width:350px;}
+#head-search span	{float:left; color: #fff; font:normal 12px/46px 'Strait',sans-serif;}
+
+#searchform		{float:left; position:relative; margin-right:20px; margin-top:8px; }
+#searchform input	{width:250px; height:30px; background:#2a4675; border:0; border-radius: 18px; margin-left:10px; text-indent:20px; color:whitesmoke; box-shadow: inset 2px 2px 2px rgba(0,0,0,.15) ;}
+#searchform input:focus	{outline:0;}
+#searchform input.btn	{width:11px; height:13px; background: url(http://www.erhanbasa.com/uploads/old/fb/fb-sprite.png) no-repeat -31px -350px; right: 15px; top: 10px; z-index:10; position:absolute; cursor:pointer;}
+
+/*	Timeline Header	*/
+#timeline-head	{height:53px; width: 100%; background: #1d1e23; position:fixed; top:46px; z-index:99999;}
+#timeline-head .page-name	{background: url(http://www.erhanbasa.com/uploads/old/fb/name-icon.png) no-repeat left center;  font: normal 20px/53px 'Strait',sans-serif; color:#d8d8d8; padding-left:40px; margin-left: 20px; display: inline-block; float:left; text-shadow: 1px 1px 1px rgba(0,0,0,.5); cursor:pointer;}
+#timeline-head .page-name:hover	{color:#fff;}
+
+
+/*	Timeline	*/
+/****************/
+
+/*	Timeline SideBar	*/
+/* #timeline-side	{position: fixed; top: 99px; height: 100%; width: 20%; background: #1D1E23; float: left; left:-20%; z-index:99999;}		*/
+/* #timeline.open		{width:80%; box-shadow:-20px 0px 30px rgba(0, 0, 0, .4); float:left; position:relative;}							*/
+/*	---	*/
+
+/*	Timeline layout	*/
+#timeline div[class*="block1x"]	{width:14.284%;}
+#timeline div[class*="block2x"]	{width:28.566%;}
+#timeline div[class*="block3x"]	{width:42.846%;}
+
+#timeline div[class*="block"][class*="x1"]	{height:250px;}
+#timeline div[class*="block"][class*="x2"]	{height:500px;}
+#timeline div[class*="block"][class*="x3"]	{height:750px;}
+
+
+#timeline .block			{float:left; overflow:hidden;}
+#timeline .block .imgcontainer 	{height:50%; overflow:hidden;}
+#timeline .block .imgcontainer img 	{width:110%;}
+
+#timeline div[class^="block"][class*="x1"] .imgcontainer	{height:100%;}
+
+#timeline div[class^="block2x"][class*="x1"] .imgcontainer	{width:50%; float:left; height:100%;}
+#timeline div[class^="block2x"][class*="x1"] .commentcontainer	{height:100%; width:50%; float:left;}
+
+#timeline .block .commentcontainer 	{height:50%; position:relative;}
+#timeline div[class*="block2x1"] .commentcontainer ,
+#timeline div[class*="block1x2"] .commentcontainer  {background: #365d98;}
+
+#timeline div[class*="block2x3"] .imgcontainer  {height:66.6%;}
+#timeline div[class*="block2x3"] .commentcontainer  {height: 33.4%;;}
+#timeline div[class*="block3x2"] .commentcontainer:before,
+#timeline div[class*="block2x3"] .commentcontainer:before  {width: 0; height: 0; border-left: 20px solid transparent;	border-right: 20px solid transparent; border-bottom: 20px solid white; position: absolute; content: '';	top: -20px; left: 40px;}
+
+/*	Feedbacks	*/
+#timeline .block .commentcontainer .feedbacks 	{height:38px; background:#ebeef5; position:absolute; bottom:0px; width:100%;}
+#timeline .block .commentcontainer .feedbacks .date 	{font: normal 12px/38px 'Strait',sans-serif; color:#999; margin-left:14px;}
+#timeline .block .commentcontainer .feedbacks ul 	{float:right; padding-right:10px;}
+#timeline .block .commentcontainer .feedbacks ul li 	{float:left;}
+#timeline .block .commentcontainer .feedbacks ul li a 	{color:#6d84b4; font: normal 11px/38px tahoma,sans-serif; margin: 0 5px;}
+#timeline .block .commentcontainer .feedbacks ul li.comment a 	{background: url(http://www.erhanbasa.com/uploads/old/fb/comment-icon.jpg) no-repeat left -1px; padding-left: 20px;}
+#timeline .block .commentcontainer .feedbacks ul li.like a 	{background: url(http://www.erhanbasa.com/uploads/old/fb/like-icon.jpg) no-repeat left -1px; padding-left: 20px;}
+
+/*	Peoples	*/
+#timeline .block .commentcontainer .peoples 	{padding:40px; color:#999;  font-family: 'Strait',sans-serif; font-size:12px;}
+#timeline .block .commentcontainer .peoples .peoplename 	{color:#3b5998; font-size:14px; background: url(http://www.erhanbasa.com/uploads/old/fb/white-star.jpg) no-repeat left center; padding-left: 18px;}
+#timeline .block .commentcontainer .peoples a 	{color:#5f729b;}
+#timeline .block .commentcontainer .peoples p 	{padding:10px 0; font-size:16px; background: url(http://www.erhanbasa.com/uploads/old/fb/comm-notif-icon.jpg) no-repeat left center; padding-left:20px;}
+
+#timeline div[class*="block2x1"] .commentcontainer .peoples .peoplename ,
+#timeline div[class*="block1x2"] .commentcontainer .peoples .peoplename {background: none; color:white; display:block; text-align: center; padding-left: 0; font-size:13px;}
+#timeline div[class*="block2x1"] .commentcontainer .peoples p ,
+#timeline div[class*="block1x2"] .commentcontainer .peoples p {background: none; color:white; width: 100%; padding: 0; text-align: center; padding-top: 15px; font-size:14px;}
+#timeline div[class*="block2x1"] .commentcontainer .peoples a ,
+#timeline div[class*="block1x2"] .commentcontainer .peoples a {	color:#7bc1f2;}
+
+
+
+@media (max-width:1860px) { 
+#timeline .block .imgcontainer img 	{width:100%;}
+#timeline div[class*="block"][class*="x1"]	{height:150px;}
+#timeline div[class*="block"][class*="x2"]	{height:300px;}
+#timeline div[class*="block"][class*="x3"]	{height:450px;}
+#timeline div[class*="block2x3"] .imgcontainer  {height:50%;}
+#timeline div[class*="block2x3"] .commentcontainer  {height:50%;}
+}
+@media (max-width:1300px) { 
+#timeline .block .commentcontainer .peoples 	{padding:30px;}
+#timeline .block .commentcontainer .peoples p	{font-size: 10px!important; padding-top:5px;}
+#timeline div[class*="block"]		{width:33.3%; height:300px!important;}
+#timeline div[class*="block2x3"] .imgcontainer  {height:50%;}
+#timeline div[class*="block2x3"] .commentcontainer  {height:50%;}
+#timeline div[class^="block2x"][class*="x1"] .commentcontainer	{height:50%;}
+#timeline div[class^="block2x"][class*="x1"] .imgcontainer img,
+#timeline div[class^="block2x"][class*="x1"] .commentcontainer	{height:100%;}
+}
+@media (max-width:1130px) { 
+#timeline .block .commentcontainer .peoples 	{padding:15px;}
+#timeline .block .commentcontainer .peoples p:last-child 	{display:none;}
+#timeline .block .commentcontainer .feedbacks .date 	{display:none;}
+#head-navigation {width: 300px;}
+#head-navigation li a {font: normal 11px/46px 'Strait',sans-serif;}
+#head-search {width: 220px;}
+#head-search span {display:none;}
+#searchform input	{width:200px;}
+}
+@media (max-width:960px) { 
+#timeline div[class*="block"]		{width:33.3%; height:200px!important;}
+}
+@media (max-width:800px) { 
+#head-navigation {display:none;}
+}
+@media (max-width:650px) { 
+#timeline div[class*="block"]		{width:50%; height:180px!important;}
+}
+
+
+/* FB Login Page*/
+
+* {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+html {
+  background: #E2E2E2;
+}
+
+body {
+	background: #E2E2E2;
+	margin:0;
+	padding:0; 
+	font-family: 'Lato', sans-serif;
+}
+
+.login-form-wrap {
+	background: rgb(81,112,173);
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(81,112,173,1) 0%, rgba(53,84,147,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(81,112,173,1)), color-stop(100%,rgba(53,84,147,1)));
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(81,112,173,1) 0%,rgba(53,84,147,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover,  rgba(81,112,173,1) 0%,rgba(53,84,147,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(81,112,173,1) 0%,rgba(53,84,147,1) 100%);
+	background: radial-gradient(ellipse at center,  rgba(81,112,173,1) 0%,rgba(53,84,147,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5170ad', endColorstr='#355493',GradientType=1 );
+	border:1px solid #2d416d;
+	box-shadow: 0 1px #5670A4 inset,
+				0 0 10px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	position: relative;
+	width: 360px;
+	height: 380px;
+	margin: 60px auto;
+	padding: 50px 30px 0 30px;
+	text-align: center;
+	&:before {
+		background: url(http://i.imgur.com/0vLxyVB.png);
+		display: block;
+		content: '';
+		width: 58px;
+		height: 19px;
+		top: 10px;
+		left: 10px;
+		position: absolute;
+
+	}
+	& > h1 {
+		margin: 0 0 50px 0;
+		padding: 0;  
+		font-size: 26px;
+		color:#fff;
+	}
+	& > h5 {
+		margin-top: 40px;
+	}
+	& > h5 > a {
+		font-size: 14px;
+		color: #fff;
+		text-decoration: none; 
+		font-weight: 400;
+	}
+}
+
+.login-form {
+
+	& input[type="email"], input[type="password"],  {
+		width: 100%; 
+		border: 1px solid #314d89;
+		outline: none;
+		padding: 12px 20px;
+		color: #afafaf;
+		font-weight: 400;
+	  font-family: 'Lato', sans-serif;
+    cursor:pointer;
+	}
+
+	& input[type="email"] {
+		border-bottom: none; 
+		border-radius: 4px 4px 0 0;
+		padding-bottom: 13px;
+		box-shadow: 0 -1px 0 #E0E0E0 inset,
+					0 1px 2px rgba(0, 0, 0, 0.23) inset;
+	}
+
+	& input[type="password"] {
+		border-top: none; 
+		border-radius: 0 0 4px 4px;
+		box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.23) inset,
+					0 1px 2px rgba(255, 255, 255, 0.1);
+	}
+
+	& input[type="submit"] {
+	  font-family: 'Lato', sans-serif;
+	  font-weight: 400;
+		background: rgb(224,224,224);
+		background: -moz-linear-gradient(top,  rgba(224,224,224,1) 0%, rgba(206,206,206,1) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,224,224,1)), color-stop(100%,rgba(206,206,206,1)));
+		background: -webkit-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(206,206,206,1) 100%);
+		background: -o-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(206,206,206,1) 100%);
+		background: -ms-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(206,206,206,1) 100%);
+		background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(206,206,206,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#cecece',GradientType=0 );
+		display: block;
+		margin: 20px auto 0 auto;
+		width: 100%;
+		border: none;
+		border-radius: 3px;
+		padding: 8px;
+		font-size: 17px;
+		color: #636363;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+		font-weight: 700;
+		box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.17),
+					0 1px 0 rgba(255, 255, 255, 0.36) inset;
+    &:hover {
+      background:#DDD; 
+    }
+    &:active {
+      padding-top: 9px;
+      padding-bottom: 7px;
+      background:#C9C9C9; 
+    }
+	}
+}
