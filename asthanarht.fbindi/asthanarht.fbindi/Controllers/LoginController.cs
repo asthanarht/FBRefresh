@@ -69,7 +69,7 @@ namespace asthanarht.fbindi.Controllers
             // Get the user's information
             dynamic me = fb.Get("me?fields=first_name,last_name,id,email");
             string email = me.email;
-
+            //dynamic post = fb.Get("me/Home");
             // Set the auth cookie
             FormsAuthentication.SetAuthCookie(email, false);
 

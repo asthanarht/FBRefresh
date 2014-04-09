@@ -1,8 +1,12 @@
-﻿using System;
+﻿using Facebook;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using asthanarht.fbindi.Helper;
+using System.Collections;
+using asthanarht.fbindi.ViewModels;
 
 namespace asthanarht.fbindi.Controllers
 {
@@ -11,9 +15,13 @@ namespace asthanarht.fbindi.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
-            return View();
+            ArrayList al = new ArrayList();
+            var fb = new FacebookClient();
+            fb.AccessToken = Session["AccessToken"].ToString();
+            dynamic me = fb.Get("me/Home?limit=18");
+            string t = Convert.ToString(me);
+            var ts = JsonHelper.Deserialize<FbWallViewModel>(t);
+            return View(ts);
         }
 
         public ActionResult About()

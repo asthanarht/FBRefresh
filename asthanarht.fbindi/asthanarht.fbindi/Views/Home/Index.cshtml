@@ -1,45 +1,466 @@
-﻿@{
+﻿@model asthanarht.fbindi.ViewModels.FbWallViewModel
+@{
     ViewBag.Title = "Home Page";
 }
-@*@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit
-                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-                If you have any questions about ASP.NET MVC visit
-                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
-            </p>
+<div id="timeline-head">
+    <span class="page-name">Hi Samantha</span>
+</div>
+<div id="timeline-side">
+    </div>
+    <div id="timeline">
+        @for(var index = 0;index < Model.Data.Count();index ++)
+        { 
+            if(index == 0)
+            {
+                <div class="block2x3 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                <div class="feedbacks">
+                    <span class="date">
+                        24 Minutes Ago
+                    </span>
+                    <ul>
+                        <li class="like"><a href="#">Like (15)</a></li>
+                        <li class="comment"><a href="#">Comment (42)</a></li>
+                        <li><a href="#">Share</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-    </section>
-}
-<h3>We suggest the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
-    </li>
+            }
+            if(index == 1)
+            {
+                <div class="block1x2 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                
+            </div>
 
-    <li class="two">
-        <h5>Add NuGet packages and jump-start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
-    </li>
+        </div>
+                
+            }
+            if (index == 2)
+            {
+                <div class="block1x2 block">
+            
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                
+            </div>
+                    <div class="imgcontainer">
+                        <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+                    </div>
 
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
-    </li>
-</ol>*@
+        </div>
+            }
+            if (index == 3)
+            {
+                <div class="block3x2 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                <div class="feedbacks">
+                    <span class="date">
+                        24 Minutes Ago
+                    </span>
+                    <ul>
+                        <li class="like"><a href="#">Like (15)</a></li>
+                        <li class="comment"><a href="#">Comment (42)</a></li>
+                        <li><a href="#">Share</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+            }
+            if (index == 4)
+            {
+                <div class="block1x1 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                <div class="feedbacks">
+                    <span class="date">
+                        24 Minutes Ago
+                    </span>
+                    <ul>
+                        <li class="like"><a href="#">Like (15)</a></li>
+                        <li class="comment"><a href="#">Comment (42)</a></li>
+                        <li><a href="#">Share</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+            }
+
+            if (index == 5)
+            {
+                <div class="block1x1 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                <div class="feedbacks">
+                    <span class="date">
+                        24 Minutes Ago
+                    </span>
+                    <ul>
+                        <li class="like"><a href="#">Like (15)</a></li>
+                        <li class="comment"><a href="#">Comment (42)</a></li>
+                        <li><a href="#">Share</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+            }
+            if (index == 6)
+            {
+                <div class="block2x1 block">
+           
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                
+            </div>
+                    <div class="imgcontainer">
+                        <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+                    </div>
+
+        </div>
+            }
+            if (index == 7)
+            {
+                <div class="block1x1 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                <div class="feedbacks">
+                    <span class="date">
+                        24 Minutes Ago
+                    </span>
+                    <ul>
+                        <li class="like"><a href="#">Like (15)</a></li>
+                        <li class="comment"><a href="#">Comment (42)</a></li>
+                        <li><a href="#">Share</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+            }
+            if (index == 8)
+            {
+                <div class="block2x2 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                
+            </div>
+
+        </div>
+
+            }
+            if (index == 9)
+            {
+                <div class="block1x2 block">
+            
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                
+            </div>
+                    <div class="imgcontainer">
+                        <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+                    </div>
+
+        </div>
+            }
+            if (index == 10)
+            {
+                <div class="block2x2 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                <div class="feedbacks">
+                    <span class="date">
+                        24 Minutes Ago
+                    </span>
+                    <ul>
+                        <li class="like"><a href="#">Like (15)</a></li>
+                        <li class="comment"><a href="#">Comment (42)</a></li>
+                        <li><a href="#">Share</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+            }
+            if (index == 11)
+            {
+                <div class="block1x2 block">
+            
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                
+            </div>
+                    <div class="imgcontainer">
+                        <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+                    </div>
+
+        </div>
+            }
+            if (index == 12)
+            {
+                <div class="block1x2 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                
+            </div>
+
+        </div>
+
+            }
+            if (index == 13)
+            {
+                <div class="block2x2 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                <div class="feedbacks">
+                    <span class="date">
+                        24 Minutes Ago
+                    </span>
+                    <ul>
+                        <li class="like"><a href="#">Like (15)</a></li>
+                        <li class="comment"><a href="#">Comment (42)</a></li>
+                        <li><a href="#">Share</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+            }
+            if (index == 14)
+            {
+                <div class="block1x2 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                
+            </div>
+
+        </div>
+            }
+            if (index == 15)
+            {
+                <div class="block2x2 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                <div class="feedbacks">
+                    <span class="date">
+                        24 Minutes Ago
+                    </span>
+                    <ul>
+                        <li class="like"><a href="#">Like (15)</a></li>
+                        <li class="comment"><a href="#">Comment (42)</a></li>
+                        <li><a href="#">Share</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+            }
+
+            if (index == 16)
+            {
+                <div class="block1x2 block">
+           
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                
+            </div>
+                    <div class="imgcontainer">
+                        <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+                    </div>
+
+        </div>
+            }
+            if (index == 17)
+            {
+                <div class="block1x2 block">
+            <div class="imgcontainer">
+                <img src="@Model.Data[index].Picture.Replace("_s.jpg","_n.jpg")" />
+            </div>
+            <div class="commentcontainer">
+                <div class="peoples">
+                    <a href="#"><strong class="peoplename">@Model.Data[index].From.Name</strong></a> Commented
+                    <p>
+                        @Model.Data[index].Message
+                    </p>
+                </div>
+                
+            </div>
+
+        </div>
+            }
+            
+        
+        }
+        
+    </div>
+        @*@section featured {
+                <section class="featured">
+                    <div class="content-wrapper">
+                        <hgroup class="title">
+                            <h1>@ViewBag.Title.</h1>
+                            <h2>@ViewBag.Message</h2>
+                        </hgroup>
+                        <p>
+                            To learn more about ASP.NET MVC visit
+                            <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+                            The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
+                            If you have any questions about ASP.NET MVC visit
+                            <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
+                        </p>
+                    </div>
+                </section>
+            }
+            <h3>We suggest the following:</h3>
+            <ol class="round">
+                <li class="one">
+                    <h5>Getting Started</h5>
+                    ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                    enables a clean separation of concerns and that gives you full control over markup
+                    for enjoyable, agile development. ASP.NET MVC includes many features that enable
+                    fast, TDD-friendly development for creating sophisticated applications that use
+                    the latest web standards.
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
+                </li>
+
+                <li class="two">
+                    <h5>Add NuGet packages and jump-start your coding</h5>
+                    NuGet makes it easy to install and update free libraries and tools.
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
+                </li>
+
+                <li class="three">
+                    <h5>Find Web Hosting</h5>
+                    You can easily find a web hosting company that offers the right mix of features
+                    and price for your applications.
+                    <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
+                </li>
+            </ol>*@

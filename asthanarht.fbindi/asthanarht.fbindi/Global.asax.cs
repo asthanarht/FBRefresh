@@ -24,5 +24,18 @@ namespace asthanarht.fbindi
             BundleConfig.RegisterBundles(BundleTable.Bundles);
            // AuthConfig.RegisterAuth();
         }
+
+        void Session_Start(object sender, EventArgs e)
+        {
+            if (Session.IsNewSession && Session["AccessToken"] == null)
+            {
+                Session["AccessToken"] = true;
+                Response.Redirect("/login");
+            }
+            else
+            {
+                Response.Redirect("/Home");
+            }
+        }
     }
 }
