@@ -225,7 +225,7 @@ namespace asthanarht.fbindi.ViewModels
 
     public class Datum
     {
-
+        
         [JsonProperty("id")]
         public string Id { get; set; }
 
@@ -294,6 +294,11 @@ namespace asthanarht.fbindi.ViewModels
 
         [JsonProperty("properties")]
         public Property[] Properties { get; set; }
+
+        public Datum()
+        {
+            this.Picture = string.Empty;
+        }
     }
 
     public class Paging3

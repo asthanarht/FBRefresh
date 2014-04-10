@@ -81,8 +81,8 @@ body	{padding-top:99px;}
 #timeline div[class*="block2x1"] .commentcontainer ,
 #timeline div[class*="block1x2"] .commentcontainer  {background: #365d98;}
 
-#timeline div[class*="block2x3"] .imgcontainer  {height:66.6%;}
-#timeline div[class*="block2x3"] .commentcontainer  {height: 33.4%;;}
+#timeline div[class*="block2x3"] .imgcontainer  {height:100%;}
+#timeline div[class*="block2x3"] .commentcontainer  {height: 100%;}
 #timeline div[class*="block3x2"] .commentcontainer:before,
 #timeline div[class*="block2x3"] .commentcontainer:before  {width: 0; height: 0; border-left: 20px solid transparent;	border-right: 20px solid transparent; border-bottom: 20px solid white; position: absolute; content: '';	top: -20px; left: 40px;}
 
